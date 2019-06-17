@@ -10,7 +10,8 @@ export class PhotoService {
   constructor(private camera: Camera, private storage: Storage) { }
   takePicture() {
     const options: CameraOptions = {
-      quality: 100,
+      quality: 50,
+      targetWidth: 150,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
